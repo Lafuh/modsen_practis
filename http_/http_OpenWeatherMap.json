@@ -1,0 +1,206 @@
+{
+	"info": {
+		"_postman_id": "39661111-6c1f-4499-a822-2200d9a2863d",
+		"name": "http_OpenWeatherMap",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "27758653"
+	},
+	"item": [
+		{
+			"name": "Current Weather by City",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.openweathermap.org/data/2.5/weather?q=London&appid=af66e5f85aead858f2f0e416d3426e82\n",
+					"protocol": "https",
+					"host": [
+						"api",
+						"openweathermap",
+						"org"
+					],
+					"path": [
+						"data",
+						"2.5",
+						"weather"
+					],
+					"query": [
+						{
+							"key": "q",
+							"value": "London"
+						},
+						{
+							"key": "appid",
+							"value": "af66e5f85aead858f2f0e416d3426e82\n"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "5 Day Weather Forecast by City",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.openweathermap.org/data/2.5/forecast?q=London&appid=af66e5f85aead858f2f0e416d3426e82",
+					"protocol": "https",
+					"host": [
+						"api",
+						"openweathermap",
+						"org"
+					],
+					"path": [
+						"data",
+						"2.5",
+						"forecast"
+					],
+					"query": [
+						{
+							"key": "q",
+							"value": "London"
+						},
+						{
+							"key": "appid",
+							"value": "af66e5f85aead858f2f0e416d3426e82"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Geocoding by City",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://api.openweathermap.org/geo/1.0/direct?q=London&limit=5&appid=af66e5f85aead858f2f0e416d3426e82",
+					"protocol": "http",
+					"host": [
+						"api",
+						"openweathermap",
+						"org"
+					],
+					"path": [
+						"geo",
+						"1.0",
+						"direct"
+					],
+					"query": [
+						{
+							"key": "q",
+							"value": "London"
+						},
+						{
+							"key": "limit",
+							"value": "5"
+						},
+						{
+							"key": "appid",
+							"value": "af66e5f85aead858f2f0e416d3426e82"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Reverse Geocoding",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://api.openweathermap.org/geo/1.0/reverse?lat=51.5074&lon=-0.1278&limit=5&appid=af66e5f85aead858f2f0e416d3426e82",
+					"protocol": "http",
+					"host": [
+						"api",
+						"openweathermap",
+						"org"
+					],
+					"path": [
+						"geo",
+						"1.0",
+						"reverse"
+					],
+					"query": [
+						{
+							"key": "lat",
+							"value": "51.5074"
+						},
+						{
+							"key": "lon",
+							"value": "-0.1278"
+						},
+						{
+							"key": "limit",
+							"value": "5"
+						},
+						{
+							"key": "appid",
+							"value": "af66e5f85aead858f2f0e416d3426e82"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
